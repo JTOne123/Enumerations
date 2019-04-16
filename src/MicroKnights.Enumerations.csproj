@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Frank Løvendahl Nielsen</Authors>
+    <Company>MicroKnights ApS</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/microknights/Enumerations</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/microknights/Enumerations</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MicroKnights.Collections" Version="1.1.3" />
+  </ItemGroup>
+
+</Project>
