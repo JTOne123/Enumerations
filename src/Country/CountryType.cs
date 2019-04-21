@@ -14,7 +14,7 @@ namespace MicroKnights.Enumerations.Country
         public string InternetCcTld { get; }
 
         public CountryType() 
-            : this("", "", "", "", "", 0, "", "")
+            : this("Unknown", "", "", "", "", 0, "", "")
         {
         }
 
