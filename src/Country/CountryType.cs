@@ -1,4 +1,5 @@
-﻿using MicroKnights.Collections;
+﻿using System.Linq;
+using MicroKnights.Collections;
 
 namespace MicroKnights.Enumerations.Country
 {
@@ -277,6 +278,16 @@ namespace MicroKnights.Enumerations.Country
         public static readonly CountryType Yemen = new CountryType("Yemen", "The Republic of Yemen", "UN member state", "YE", "YEM", 887, "ISO 3166-2:YE", ".ye");
         public static readonly CountryType Zambia = new CountryType("Zambia", "The Republic of Zambia", "UN member state", "ZM", "ZMB", 894, "ISO 3166-2:ZM", ".zm");
         public static readonly CountryType Zimbabwe = new CountryType("Zimbabwe", "The Republic of Zimbabwe", "UN member state", "ZW", "ZWE", 716, "ISO 3166-2:ZW", ".zw");
+
+        public static CountryType GetByAlpha2CodeOrDefault(string countryAlpha2Code, CountryType defaultType)
+        {
+            return GetAll().SingleOrDefault(_ => _.Alpha2Code == countryAlpha2Code) ?? defaultType;
+        }
+
+        public static CountryType GetByAlpha3CodeOrDefault(string countryAlpha3Code, CountryType defaultType)
+        {
+            return GetAll().SingleOrDefault(_ => _.Alpha3Code == countryAlpha3Code) ?? defaultType;
+        }
 
         public bool IsSelectable => Value > 0;
     }
