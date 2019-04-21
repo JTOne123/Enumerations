@@ -13,6 +13,11 @@ namespace MicroKnights.Enumerations.Country
         public string SubdivisionCode { get; }
         public string InternetCcTld { get; }
 
+        public CountryType() 
+            : this("", "", "", "", "", 0, "", "")
+        {
+        }
+
         public CountryType(string countryName, string officialStateName, string sovereignty, string alpha2Code, string alpha3Code, int countryCode, string subdivisionCode, string internetCcTld) 
             : base(countryCode, countryName)
         {
@@ -24,7 +29,7 @@ namespace MicroKnights.Enumerations.Country
             InternetCcTld = internetCcTld;
         }
 
-        public static readonly CountryType Unknown = new CountryType("", "", "", "", "", 0, "", "");
+        public static readonly CountryType Unknown = new CountryType();
         public static readonly CountryType Afghanistan = new CountryType("Afghanistan", "The Islamic Republic of Afghanistan", "UN member state", "AF", "AFG", 4, "ISO 3166-2:AF", ".af");
         public static readonly CountryType ÅlandIslands = new CountryType("Åland Islands", "Åland", "Finland", "AX", "ALA", 248, "ISO 3166-2:AX", ".ax");
         public static readonly CountryType Albania = new CountryType("Albania", "The Republic of Albania", "UN member state", "AL", "ALB", 8, "ISO 3166-2:AL", ".al");
